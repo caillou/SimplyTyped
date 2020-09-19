@@ -84,7 +84,7 @@ test('Can make all fields of options object required (not optional and not nulla
 ```
 
 ### CombineObjects
-Takes two objects and returns their intersection.
+Takes two objects and returns their union.
 This combines all keys and uses `ObjectType` to "clean up" the resultant object.
 Useful for making extremely complex types look nice in VSCode.
 ```ts
@@ -106,7 +106,7 @@ test('Can combine two objects (without pesky & in vscode)', t => {
 
 ### DeepPartial
 Uses `Partial` to make every parameter of an object optional (`| undefined`).
-Iterates through arrays of objects and nested objects.
+Iterates through arrays of objects and noested objects.
 ```ts
 test('Can get a deep partial object', t => {
     type a = {
